@@ -1,0 +1,22 @@
+id: "racing_game_pygame_001"
+name: "2D Racing Game with AI - Pygame"
+description: "A 2D top-down racing game built using Pygame, featuring player-controlled and AI-controlled cars, a circular race track, collision detection, and lap timing."
+status: draft
+created_at: 2025-05-29T00:00:00
+updated_at: 2025-05-29T00:00:00
+metadata:
+  requirements:
+    graphics: "2D top-down view using Pygame"
+    player_car: "Controllable by keyboard input"
+    ai_opponents: "Multiple AI-controlled cars with basic path following"
+    race_track: "Circular track with defined boundaries"
+    collision_system: "Detect and respond to collisions between cars and track boundaries"
+    lap_timing: "Track and display time per lap for each car"
+    mvp_features:
+      - player car movement
+      - AI opponent movement
+      - circular race track layout
+      - basic collision detection
+      - lap counter and timer
+default_language: python
+
