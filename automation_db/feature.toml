@@ -2,3 +2,6 @@
 name = "window"
 requirements = [ "prototype window for game",]
 
+[[feature]]
+name = "settings"
+requirements = [ "data model, crud for settings",]

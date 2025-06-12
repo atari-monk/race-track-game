@@ -5,3 +5,16 @@ file_name = "simple_example.py"
 class_name = "GameWindow"
 path = "src/game_window"
 
+[[file]]
+feature = "settings"
+task = "data_model"
+file_name = "settings.py"
+class_name = "Settings"
+path = "src/settings"
+
+[[file]]
+feature = "settings"
+task = "settings_crud"
+file_name = "settings_crud.py"
+class_name = "SettingsCRUD"
+path = "src/settings"
