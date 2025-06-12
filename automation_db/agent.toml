@@ -1,0 +1,16 @@
+[[agent]]
+role = "interface_designer"
+requirements = [ "implement interface based on requirements", "use Protocol type", "use pure contracts only",]
+
+[[agent]]
+role = "implementer"
+requirements = [ "implement code based on requirements", "use pytest for tests", "entrypoint files must use: if __name__ == '__main__'",]
+
+[[agent]]
+role = "validator"
+requirements = [ "provide feedback on code",]
+
+[[agent]]
+role = "tester"
+requirements = [ "run tests and provide feedback",]
+

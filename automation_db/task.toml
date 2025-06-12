@@ -1,0 +1,7 @@
+[[task]]
+feature = "window"
+name = "simple_example"
+requirements = [ "game window", "1024x768", "ability to resize", "ability to maximalize", "ability of fullscreen", "title: Racing Track", "black background", "write white text in center: test",]
+assigned_to = "implementer"
+status = "tested"
+

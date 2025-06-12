@@ -1,0 +1,10 @@
+{
+  "python.analysis.typeCheckingMode": "strict",
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingTypeStubs": "none"
+  },
+  "files.exclude": {
+    "docs/ai_code_gen_sys/ai_code": false
+  }
+}

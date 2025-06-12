@@ -1,0 +1,7 @@
+[[file]]
+feature = "window"
+task = "simple_example"
+file_name = "simple_example.py"
+class_name = "GameWindow"
+path = "src/game_window"
+

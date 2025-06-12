@@ -1,0 +1,2 @@
+[codestyle]
+requirements = [ "latest python", "strict types", "solid", "dont use any comments or docstrings in code", "output only code block, no other text",]

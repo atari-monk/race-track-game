@@ -1,0 +1,5 @@
+[project]
+name = "race-track-game"
+path = "C:\\atari-monk\\code\\race-track-game"
+dependencies = [ "arcade",]
+requirements = [ "2d top down view", "racing game",]

@@ -1,0 +1,3 @@
+.pytest_cache
+__pycache__
+race_track_game.egg-info

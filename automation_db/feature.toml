@@ -1,0 +1,4 @@
+[[feature]]
+name = "window"
+requirements = [ "prototype window for game",]
+
