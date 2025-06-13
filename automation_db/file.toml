@@ -1,4 +1,5 @@
 [[file]]
+id = 1
 feature = "window"
 task = "simple_example"
 file_name = "simple_example.py"
@@ -6,6 +7,7 @@ class_name = "GameWindow"
 path = "src/game_window"
 
 [[file]]
+id = 2
 feature = "settings"
 task = "data_model"
 file_name = "settings.py"
@@ -13,8 +15,18 @@ class_name = "Settings"
 path = "src/settings"
 
 [[file]]
+id = 3
 feature = "settings"
 task = "settings_crud"
 file_name = "settings_crud.py"
 class_name = "SettingsCRUD"
 path = "src/settings"
+
+[[file]]
+id = 4
+feature = "main_menu"
+task = "main_menu_view"
+file_name = "main_menu_view.py"
+class_name = "MainMenu"
+path = "src/main_menu"
+

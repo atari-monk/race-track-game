@@ -2,6 +2,7 @@
 feature = "window"
 name = "simple_example"
 requirements = [ "game window", "1024x768", "ability to resize", "ability to maximalize", "ability of fullscreen", "title: Racing Track", "black background", "write white text in center: test",]
+files = [ 1,]
 assigned_to = "implementer"
 status = "tested"
 
@@ -9,13 +10,23 @@ status = "tested"
 feature = "settings"
 name = "data_model"
 requirements = [ "data_class", "fullscreen bool setting",]
+files = [ 2,]
 assigned_to = "implementer"
 status = "tested"
 
 [[task]]
 feature = "settings"
 name = "settings_crud"
-requirements = [ "class with crud for toml settings", "if file not exists, create", "fullscreen bool setting", "use data model", "load, save methods", "smoke test in script"]
+requirements = [ "class with crud for toml settings", "if file not exists, create", "fullscreen bool setting", "use data model", "load, save methods", "smoke test in script",]
+files = [ 2, 3,]
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "main_menu_view"
+requirements = [ "Main Menu View", "Buttons: 'Start Game', 'Settings', 'Exit'", "Use arcade.View subclass", "Select options with arrows", "run it in script __main__",]
+files = [ 4,]
 assigned_to = "implementer"
 status = "tested"
 
