@@ -30,3 +30,11 @@ file_name = "main_menu_view.py"
 class_name = "MainMenu"
 path = "src/main_menu"
 
+[[file]]
+id = 5
+feature = "window"
+task = "game_window"
+file_name = "game_window.py"
+class_name = "GameWindow"
+path = "src/game_window"
+

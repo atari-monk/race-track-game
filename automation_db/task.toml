@@ -30,3 +30,11 @@ files = [ 4,]
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "window"
+name = "game_window"
+requirements = [ "main game window", "integrate window and main menu", "run it in script __main__",]
+files = [ 1, 4, 5,]
+assigned_to = "implementer"
+status = "implementing"
+
