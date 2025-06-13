@@ -39,10 +39,18 @@ class_name = "GameWindow"
 path = "src/game_window"
 
 [[file]]
-id = "6"
+id = 6
 feature = "main_menu"
 task = "settings_menu_view"
 file_name = "settings_menu_view.py"
 class_name = "SettingsMenu"
 path = "src/main_menu"
+
+[[file]]
+id = 7
+feature = "event_bus"
+task = "event_bus_for_menu"
+file_name = "event_bus.py"
+class_name = "EventBus"
+path = "src/event_bus"
 

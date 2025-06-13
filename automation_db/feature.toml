@@ -10,3 +10,6 @@ requirements = [ "data model, crud for settings",]
 name = "main_menu"
 requirements = [ "game main menu",]
 
+[[feature]]
+name = "event_bus"
+requirements = [ "decoupled events system",]

@@ -46,3 +46,11 @@ files = [ 2, 3, 6,]
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "event_bus"
+name = "event_bus_for_menu"
+requirements = [ "create event bus class for game decoupled events system", "write it so it can be used to show two views so that they stay independant form each other",]
+files = [ 4, 6,]
+assigned_to = "implementer"
+status = "tested"
+
