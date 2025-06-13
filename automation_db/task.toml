@@ -54,3 +54,11 @@ files = [ 4, 6,]
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "main_menu"
+name = "navigation_controller"
+requirements = [ "write navigation controller class to switch views", "explicit functions like go_to_main_menu(), go_to_settings() that directly control navigation", "run it in script",]
+files = [ 4, 6,]
+assigned_to = "implementer"
+status = "tested"
+

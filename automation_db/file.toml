@@ -54,3 +54,11 @@ file_name = "event_bus.py"
 class_name = "EventBus"
 path = "src/event_bus"
 
+[[file]]
+id = 8
+feature = "main_menu"
+task = "navigation_controller"
+file_name = "menu_navigation.py"
+class_name = "MenuNavigation"
+path = "src/main_menu"
+
