@@ -38,3 +38,11 @@ file_name = "game_window.py"
 class_name = "GameWindow"
 path = "src/game_window"
 
+[[file]]
+id = "6"
+feature = "main_menu"
+task = "settings_menu_view"
+file_name = "settings_menu_view.py"
+class_name = "SettingsMenu"
+path = "src/main_menu"
+

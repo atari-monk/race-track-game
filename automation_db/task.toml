@@ -36,5 +36,13 @@ name = "game_window"
 requirements = [ "main game window", "integrate window and main menu", "run it in script __main__",]
 files = [ 1, 4, 5,]
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "settings_menu_view"
+requirements = [ "Settings Menu View", "Buttons: 'Fullscreen', 'Back'", "Use arcade.View subclass", "Select options with arrows", "run it in script __main__", "write one class", "integrate with settings crud", "use comment where MainMenu is needed",]
+files = [ 2, 3, 6,]
+assigned_to = "implementer"
+status = "tested"
 
