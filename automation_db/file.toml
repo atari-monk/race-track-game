@@ -69,3 +69,11 @@ task = "smoke_menu_navigation"
 file_name = "smoke_menu_navigation.py"
 path = "src/main_menu"
 
+[[file]]
+id = 10
+feature = "window"
+task = "game_view"
+file_name = "game_view.py"
+class_name = "GameView"
+path = "src/game_window"
+

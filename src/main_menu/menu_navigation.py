@@ -1,29 +1,36 @@
 from arcade import Window, View
-from typing import Callable, Optional
+from typing import Callable
 
-class NavigationController:
+from src.game_window.game_view import GameView
+
+class MenuNavigation:
     def __init__(
         self,
         window: Window,
-        main_menu_factory: Callable[['NavigationController'], View],
-        settings_menu_factory: Callable[['NavigationController'], View]
+        factories: dict[str, Callable[['MenuNavigation'], View]]
     ) -> None:
         self.window = window
-        self._main_menu_factory = main_menu_factory
-        self._settings_menu_factory = settings_menu_factory
-        self._main_menu_view: Optional[View] = None
-        self._settings_menu_view: Optional[View] = None
+        self._factories = factories
+        self._views: dict[str, View] = {}
+
+    def go_to(self, view_name: str, reuse: bool = True) -> None:
+        if reuse and view_name in self._views:
+            self.window.show_view(self._views[view_name])
+        else:
+            view: View
+            if view_name == "game_view":
+                view = GameView()
+            else:
+                view = self._factories[view_name](self)
+            self._views[view_name] = view
+            self.window.show_view(view)
 
     def go_to_main_menu(self, reuse: bool = True) -> None:
-        if reuse and self._main_menu_view:
-            self.window.show_view(self._main_menu_view)
-        else:
-            self._main_menu_view = self._main_menu_factory(self)
-            self.window.show_view(self._main_menu_view)
+        self.go_to("main_menu", reuse)
 
     def go_to_settings(self, reuse: bool = True) -> None:
-        if reuse and self._settings_menu_view:
-            self.window.show_view(self._settings_menu_view)
-        else:
-            self._settings_menu_view = self._settings_menu_factory(self)
-            self.window.show_view(self._settings_menu_view)
+        self.go_to("settings_menu", reuse)
+
+    def go_to_game(self, reuse: bool = True) -> None:
+        self.go_to("game_view", reuse)
+

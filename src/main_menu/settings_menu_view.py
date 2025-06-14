@@ -1,16 +1,16 @@
 from arcade import View, draw_text, key, get_window
-from src.main_menu.menu_navigation import NavigationController
+from src.main_menu.menu_navigation import MenuNavigation
 from src.settings.settings import Settings
 from src.settings.settings_crud import SettingsCRUD
 
 class SettingsMenu(View):
-    def __init__(self, controller: NavigationController, crud: SettingsCRUD) -> None:
+    def __init__(self, controller: MenuNavigation, crud: SettingsCRUD) -> None:
         super().__init__()
         self.options: list[str] = ['Fullscreen', 'Back']
         self.selected_index: int = 0
         self.crud: SettingsCRUD = crud
         self.settings: Settings = self.crud.load()
-        self.controller: NavigationController = controller
+        self.controller: MenuNavigation = controller
 
     def on_draw(self) -> None:
         self.clear()

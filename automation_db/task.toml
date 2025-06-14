@@ -133,3 +133,48 @@ save_file = 5
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "window"
+name = "game_view"
+requirements = [ "need a game view", "green background",]
+context_files = [ 5, 4,]
+save_file = 10
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "game_view_navigation"
+requirements = [ "need a navigation for game view", "generate factory for it", "move factories to one parameter", "update only navigation class", "Argument of type 'View | None' cannot be assigned to parameter 'new_view' of type 'View' in function 'show_view'",]
+context_files = [ 8, 10,]
+save_file = 8
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "new_navigation_for_main"
+requirements = [ "fix view's navigation due to changes in it",]
+context_files = [ 4, 8,]
+save_file = 4
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "new_navigation_for_settings"
+requirements = [ "fix view's navigation due to changes in it",]
+context_files = [ 6, 8,]
+save_file = 6
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "window"
+name = "game_view_integration"
+requirements = [ "use new game view in main window via navigation",]
+context_files = [ 5, 10, 8,]
+save_file = 5
+assigned_to = "implementer"
+status = "tested"
+

@@ -1,10 +1,10 @@
 from arcade import View, draw_text, key, Window
 from arcade.gui import UIManager
 from typing import List
-from src.main_menu.menu_navigation import NavigationController
+from src.main_menu.menu_navigation import MenuNavigation
 
-class MainMenuView(View):
-    def __init__(self, controller: NavigationController) -> None:
+class MainMenu(View):
+    def __init__(self, controller: MenuNavigation) -> None:
         super().__init__()
         self.options: List[str] = ['Start Game', 'Settings', 'Exit']
         self.selected_index = 0
@@ -35,3 +35,6 @@ class MainMenuView(View):
                 self.window.close()
             elif selected == 'Settings':
                 self.controller.go_to_settings()
+            elif selected == 'Start Game':
+                self.controller.go_to_game()
+

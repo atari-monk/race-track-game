@@ -1,10 +1,11 @@
-from typing import Final
-from arcade import Window, set_background_color, color, run
+from typing import Final, Callable
+from arcade import View, Window, set_background_color, color, run
 from pathlib import Path
+from src.main_menu.menu_navigation import MenuNavigation
 from src.settings.settings_crud import SettingsCRUD
-from src.main_menu.menu_navigation import NavigationController
-from src.main_menu.main_menu_view import MainMenuView
+from src.main_menu.main_menu_view import MainMenu
 from src.main_menu.settings_menu_view import SettingsMenu
+from src.game_window.game_view import GameView
 
 class GameWindow(Window):
     WIDTH: Final[int] = 1024
@@ -16,14 +17,22 @@ class GameWindow(Window):
         super().__init__(self.WIDTH, self.HEIGHT, self.TITLE, resizable=True, fullscreen=settings.fullscreen)
         set_background_color(color.BLACK)
         self._crud = crud
-        controller = NavigationController(self, self._main_menu_factory, self._settings_menu_factory)
-        controller.go_to_main_menu()
+        factories: dict[str, Callable[[MenuNavigation], View]] = {
+            "main_menu": self._main_menu_factory,
+            "settings_menu": self._settings_menu_factory,
+            "game_view": self._game_view_factory
+        }
+        self.controller = MenuNavigation(self, factories)
+        self.controller.go_to_main_menu()
 
-    def _main_menu_factory(self, controller: NavigationController) -> MainMenuView:
-        return MainMenuView(controller)
+    def _main_menu_factory(self, controller: MenuNavigation) -> MainMenu:
+        return MainMenu(controller)
 
-    def _settings_menu_factory(self, controller: NavigationController) -> SettingsMenu:
+    def _settings_menu_factory(self, controller: MenuNavigation) -> SettingsMenu:
         return SettingsMenu(controller, self._crud)
+
+    def _game_view_factory(self, controller: MenuNavigation) -> GameView:
+        return GameView()
 
 if __name__ == "__main__":
     crud = SettingsCRUD(Path('settings.toml'))
