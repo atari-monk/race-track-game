@@ -1,22 +1,23 @@
 from pathlib import Path
 from arcade import View, draw_text, key, get_window
+from src.main_menu.menu_navigation import NavigationController
 from src.settings.settings_crud import SettingsCRUD
 from src.settings.settings import Settings
 
 class SettingsMenuView(View):
-    def __init__(self) -> None:
+    def __init__(self, controller: NavigationController) -> None:
         super().__init__()
         self.options = ['Fullscreen', 'Back']
         self.selected_index = 0
         self.crud = SettingsCRUD(Path('settings.toml'))
         self.settings = self.crud.load()
+        self.controller = controller
 
     def on_draw(self) -> None:
         self.clear()
         w, h = get_window().width, get_window().height
         for i, option in enumerate(self.options):
-            is_selected = i == self.selected_index
-            color = (255, 255, 0) if is_selected else (255, 255, 255)
+            color = (255, 255, 0) if i == self.selected_index else (255, 255, 255)
             label = f"{option}: {'On' if self.settings.fullscreen else 'Off'}" if option == 'Fullscreen' else option
             draw_text(label, w // 2, h // 2 - i * 40, color, 24, anchor_x='center')
 
@@ -32,14 +33,4 @@ class SettingsMenuView(View):
                 self.crud.save(self.settings)
                 get_window().set_fullscreen(self.settings.fullscreen)
             elif option == 'Back':
-                # self.window.show_view(MainMenuView())
-                pass
-
-if __name__ == '__main__':
-    import arcade
-
-    window = arcade.Window(800, 600, 'Settings Menu')
-    view = SettingsMenuView()
-    window.show_view(view)
-    arcade.run()
-
+                self.controller.go_to_main_menu()

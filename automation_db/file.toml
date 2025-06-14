@@ -62,3 +62,19 @@ file_name = "menu_navigation.py"
 class_name = "MenuNavigation"
 path = "src/main_menu"
 
+[[file]]
+id = 9
+feature = "main_menu"
+task = "navigation_for_main_view"
+file_name = "main_menu_view.py"
+class_name = "MainMenu"
+path = "src/main_menu"
+
+[[file]]
+id = 10
+feature = "main_menu"
+task = "navigation_for_settings_view"
+file_name = "settings_menu_view.py"
+class_name = "SettingsMenu"
+path = "src/main_menu"
+

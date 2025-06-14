@@ -1,33 +1,29 @@
-from arcade import Window
-from src.main_menu.main_menu_view import MainMenuView
-from src.main_menu.settings_menu_view import SettingsMenuView
+from arcade import Window, View
+from typing import Callable, Optional
 
 class NavigationController:
-    def __init__(self, window: Window) -> None:
+    def __init__(
+        self,
+        window: Window,
+        main_menu_factory: Callable[['NavigationController'], View],
+        settings_menu_factory: Callable[['NavigationController'], View]
+    ) -> None:
         self.window = window
-        self._main_menu_view: MainMenuView | None = None
-        self._settings_menu_view: SettingsMenuView | None = None
+        self._main_menu_factory = main_menu_factory
+        self._settings_menu_factory = settings_menu_factory
+        self._main_menu_view: Optional[View] = None
+        self._settings_menu_view: Optional[View] = None
 
-    def go_to_main_menu(self, reuse: bool = False) -> None:
-        if reuse:
-            if not self._main_menu_view:
-                self._main_menu_view = MainMenuView()
+    def go_to_main_menu(self, reuse: bool = True) -> None:
+        if reuse and self._main_menu_view:
             self.window.show_view(self._main_menu_view)
         else:
-            self.window.show_view(MainMenuView())
+            self._main_menu_view = self._main_menu_factory(self)
+            self.window.show_view(self._main_menu_view)
 
-    def go_to_settings(self, reuse: bool = False) -> None:
-        if reuse:
-            if not self._settings_menu_view:
-                self._settings_menu_view = SettingsMenuView()
+    def go_to_settings(self, reuse: bool = True) -> None:
+        if reuse and self._settings_menu_view:
             self.window.show_view(self._settings_menu_view)
         else:
-            self.window.show_view(SettingsMenuView())
-
-if __name__ == '__main__':
-    import arcade
-
-    window = arcade.Window(800, 600, "Race Track Game")
-    controller = NavigationController(window)
-    controller.go_to_main_menu()
-    arcade.run()
+            self._settings_menu_view = self._settings_menu_factory(self)
+            self.window.show_view(self._settings_menu_view)

@@ -62,3 +62,19 @@ files = [ 4, 6,]
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "main_menu"
+name = "navigation_for_main_view"
+requirements = [ "use navigation controller in menu view",]
+files = [ 4, 8,]
+assigned_to = "implementer"
+status = "implementing"
+
+[[task]]
+feature = "main_menu"
+name = "navigation_for_settings_view"
+requirements = [ "use navigation controller in menu view",]
+files = [ 6, 8,]
+assigned_to = "implementer"
+status = "implementing"
+
