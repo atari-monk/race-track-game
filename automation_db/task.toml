@@ -2,7 +2,8 @@
 feature = "window"
 name = "simple_example"
 requirements = [ "game window", "1024x768", "ability to resize", "ability to maximalize", "ability of fullscreen", "title: Racing Track", "black background", "write white text in center: test",]
-files = [ 1,]
+context_files = [ 1,]
+save_file = 1
 assigned_to = "implementer"
 status = "tested"
 
@@ -10,7 +11,8 @@ status = "tested"
 feature = "settings"
 name = "data_model"
 requirements = [ "data_class", "fullscreen bool setting",]
-files = [ 2,]
+context_files = [ 2,]
+save_file = 2
 assigned_to = "implementer"
 status = "tested"
 
@@ -18,7 +20,8 @@ status = "tested"
 feature = "settings"
 name = "settings_crud"
 requirements = [ "class with crud for toml settings", "if file not exists, create", "fullscreen bool setting", "use data model", "load, save methods", "smoke test in script",]
-files = [ 2, 3,]
+context_files = [ 2, 3,]
+save_file = 3
 assigned_to = "implementer"
 status = "tested"
 
@@ -26,7 +29,8 @@ status = "tested"
 feature = "main_menu"
 name = "main_menu_view"
 requirements = [ "Main Menu View", "Buttons: 'Start Game', 'Settings', 'Exit'", "Use arcade.View subclass", "Select options with arrows", "run it in script __main__",]
-files = [ 4,]
+context_files = [ 4,]
+save_file = 4
 assigned_to = "implementer"
 status = "tested"
 
@@ -34,7 +38,8 @@ status = "tested"
 feature = "window"
 name = "game_window"
 requirements = [ "main game window", "integrate window and main menu", "run it in script __main__",]
-files = [ 1, 4, 5,]
+context_files = [ 1, 4, 5,]
+save_file = 5
 assigned_to = "implementer"
 status = "tested"
 
@@ -42,7 +47,8 @@ status = "tested"
 feature = "main_menu"
 name = "settings_menu_view"
 requirements = [ "Settings Menu View", "Buttons: 'Fullscreen', 'Back'", "Use arcade.View subclass", "Select options with arrows", "run it in script __main__", "write one class", "integrate with settings crud", "use comment where MainMenu is needed",]
-files = [ 2, 3, 6,]
+context_files = [ 2, 3, 6,]
+save_file = 6
 assigned_to = "implementer"
 status = "tested"
 
@@ -50,7 +56,8 @@ status = "tested"
 feature = "event_bus"
 name = "event_bus_for_menu"
 requirements = [ "create event bus class for game decoupled events system", "write it so it can be used to show two views so that they stay independant form each other",]
-files = [ 4, 6,]
+context_files = [ 4, 6,]
+save_file = 7
 assigned_to = "implementer"
 status = "tested"
 
@@ -58,7 +65,8 @@ status = "tested"
 feature = "main_menu"
 name = "navigation_controller"
 requirements = [ "write navigation controller class to switch views", "explicit functions like go_to_main_menu(), go_to_settings() that directly control navigation", "run it in script",]
-files = [ 4, 6,]
+context_files = [ 4, 6,]
+save_file = 8
 assigned_to = "implementer"
 status = "tested"
 
@@ -66,15 +74,35 @@ status = "tested"
 feature = "main_menu"
 name = "navigation_for_main_view"
 requirements = [ "use navigation controller in menu view",]
-files = [ 4, 8,]
+context_files = [ 4, 8,]
+save_file = 4
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
 
 [[task]]
 feature = "main_menu"
 name = "navigation_for_settings_view"
 requirements = [ "use navigation controller in menu view",]
-files = [ 6, 8,]
+context_files = [ 6, 8,]
+save_file = 6
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "smoke_menu_navigation"
+requirements = [ "write smoke test", "use navigation controller and menu views to check if menu works",]
+context_files = [ 8, 4, 6,]
+save_file = 9
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "window"
+name = "integrate_menu"
+requirements = [ "use menu with navigation in main window",]
+context_files = [ 5, 9, 8, 4, 6,]
+save_file = 5
 assigned_to = "implementer"
 status = "implementing"
 
