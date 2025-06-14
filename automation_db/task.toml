@@ -104,5 +104,32 @@ requirements = [ "use menu with navigation in main window",]
 context_files = [ 5, 9, 8, 4, 6,]
 save_file = 5
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "crud_di"
+requirements = [ "use crud in di mode",]
+context_files = [ 2, 3, 6,]
+save_file = 6
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "main_menu"
+name = "smoke_menu_navigation fix"
+requirements = [ "fix smoke test after crud is di",]
+context_files = [ 2, 3, 4, 6, 8, 9,]
+save_file = 9
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "window"
+name = "game_window_fix"
+requirements = [ "crud is now in di", "fix main window", "put crud in init so it can set fullscreen",]
+context_files = [ 2, 3, 4, 6, 8, 9, 5,]
+save_file = 5
+assigned_to = "implementer"
+status = "tested"
 
