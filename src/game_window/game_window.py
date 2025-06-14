@@ -21,6 +21,7 @@ class GameWindow(Window):
         self._crud = crud
         self._car = Car()
         self._track = Track()
+        self._track.resize(self.width, self.height)
         factories: dict[str, Callable[[MenuNavigation], View]] = {
             "main_menu": self._main_menu_factory,
             "settings_menu": self._settings_menu_factory,
@@ -37,6 +38,10 @@ class GameWindow(Window):
 
     def _game_view_factory(self, controller: MenuNavigation) -> GameView:
         return GameView(self._car, self._track)
+
+    def on_resize(self, width: int, height: int) -> None:
+        super().on_resize(width, height)
+        self._track.resize(width, height)
 
 if __name__ == "__main__":
     crud = SettingsCRUD(Path('settings.toml'))

@@ -232,3 +232,12 @@ save_file = 10
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "track"
+name = "center_track_object"
+requirements = [ "make track center on screen and refresh it on resize, fullscreen and window size changes", "can we make shape of track like horizontal O", "make track fill screen",]
+context_files = [ 5, 12,]
+save_file = 12
+assigned_to = "implementer"
+status = "implementing"
+
