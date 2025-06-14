@@ -185,7 +185,7 @@ requirements = [ "arcade way to do car for player", "lets render simple represen
 context_files = [ 5, 10, 11,]
 save_file = 11
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
 
 [[task]]
 feature = "window"
@@ -194,7 +194,7 @@ requirements = [ "generate car in main window and pass it to game view",]
 context_files = [ 5, 10, 11,]
 save_file = 5
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
 
 [[task]]
 feature = "window"
@@ -203,5 +203,32 @@ requirements = [ "show car in game view", "get instance passed from main window"
 context_files = [ 5, 10, 11,]
 save_file = 10
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
+
+[[task]]
+feature = "track"
+name = "track_object"
+requirements = [ "track for cars", "elipsoid with width, a closed road to cricle on", "if point of car is outside a road it should be very slow", "need simplest method to calculate if car is outside road, what math is best of it ?",]
+context_files = [ 11,]
+save_file = 12
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "window"
+name = "track_in_main_window"
+requirements = [ "generate track in main window and pass it to game view",]
+context_files = [ 12, 5,]
+save_file = 5
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "window"
+name = "track_in_game_view"
+requirements = [ "show track in game view", "get instance passed from main window",]
+context_files = [ 12, 5,]
+save_file = 10
+assigned_to = "implementer"
+status = "tested"
 

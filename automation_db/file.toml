@@ -53,6 +53,13 @@ file_name = "car.py"
 path = "src/car"
 
 [[file]]
+id = 12
+feature = "track"
+task = "track_object"
+file_name = "track.py"
+path = "src/track"
+
+[[file]]
 id = 2
 feature = "settings"
 task = "data_model"

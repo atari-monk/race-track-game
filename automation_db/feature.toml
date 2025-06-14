@@ -15,5 +15,9 @@ name = "car"
 requirements = [ "car game object",]
 
 [[feature]]
+name = "track"
+requirements = [ "track for cars game object",]
+
+[[feature]]
 name = "event_bus"
 requirements = [ "decoupled events system",]
