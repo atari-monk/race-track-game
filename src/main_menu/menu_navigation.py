@@ -1,8 +1,6 @@
 from arcade import Window, View
 from typing import Callable
 
-from src.game_window.game_view import GameView
-
 class MenuNavigation:
     def __init__(
         self,
@@ -17,11 +15,7 @@ class MenuNavigation:
         if reuse and view_name in self._views:
             self.window.show_view(self._views[view_name])
         else:
-            view: View
-            if view_name == "game_view":
-                view = GameView()
-            else:
-                view = self._factories[view_name](self)
+            view = self._factories[view_name](self)
             self._views[view_name] = view
             self.window.show_view(view)
 

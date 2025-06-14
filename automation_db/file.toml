@@ -1,10 +1,56 @@
 [[file]]
-id = 1
+id = 5
 feature = "window"
-task = "simple_example"
-file_name = "simple_example.py"
+task = "game_window"
+file_name = "game_window.py"
 class_name = "GameWindow"
 path = "src/game_window"
+
+[[file]]
+id = 10
+feature = "window"
+task = "game_view"
+file_name = "game_view.py"
+class_name = "GameView"
+path = "src/game_window"
+
+[[file]]
+id = 4
+feature = "main_menu"
+task = "main_menu_view"
+file_name = "main_menu_view.py"
+class_name = "MainMenu"
+path = "src/main_menu"
+
+[[file]]
+id = 6
+feature = "main_menu"
+task = "settings_menu_view"
+file_name = "settings_menu_view.py"
+class_name = "SettingsMenu"
+path = "src/main_menu"
+
+[[file]]
+id = 8
+feature = "main_menu"
+task = "navigation_controller"
+file_name = "menu_navigation.py"
+class_name = "MenuNavigation"
+path = "src/main_menu"
+
+[[file]]
+id = 9
+feature = "main_menu"
+task = "smoke_menu_navigation"
+file_name = "smoke_menu_navigation.py"
+path = "src/main_menu"
+
+[[file]]
+id = 11
+feature = "car"
+task = "simple_car_object"
+file_name = "car.py"
+path = "src/car"
 
 [[file]]
 id = 2
@@ -23,28 +69,12 @@ class_name = "SettingsCRUD"
 path = "src/settings"
 
 [[file]]
-id = 4
-feature = "main_menu"
-task = "main_menu_view"
-file_name = "main_menu_view.py"
-class_name = "MainMenu"
-path = "src/main_menu"
-
-[[file]]
-id = 5
+id = 1
 feature = "window"
-task = "game_window"
-file_name = "game_window.py"
+task = "simple_example"
+file_name = "simple_example.py"
 class_name = "GameWindow"
 path = "src/game_window"
-
-[[file]]
-id = 6
-feature = "main_menu"
-task = "settings_menu_view"
-file_name = "settings_menu_view.py"
-class_name = "SettingsMenu"
-path = "src/main_menu"
 
 [[file]]
 id = 7
@@ -53,27 +83,4 @@ task = "event_bus_for_menu"
 file_name = "event_bus.py"
 class_name = "EventBus"
 path = "src/event_bus"
-
-[[file]]
-id = 8
-feature = "main_menu"
-task = "navigation_controller"
-file_name = "menu_navigation.py"
-class_name = "MenuNavigation"
-path = "src/main_menu"
-
-[[file]]
-id = 9
-feature = "main_menu"
-task = "smoke_menu_navigation"
-file_name = "smoke_menu_navigation.py"
-path = "src/main_menu"
-
-[[file]]
-id = 10
-feature = "window"
-task = "game_view"
-file_name = "game_view.py"
-class_name = "GameView"
-path = "src/game_window"
 

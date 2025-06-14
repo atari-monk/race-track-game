@@ -178,3 +178,30 @@ save_file = 5
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "car"
+name = "simple_car_object"
+requirements = [ "arcade way to do car for player", "lets render simple representation for now", "steering with arrows", "it will be generated in main window and shown in game view later",]
+context_files = [ 5, 10, 11,]
+save_file = 11
+assigned_to = "implementer"
+status = "implementing"
+
+[[task]]
+feature = "window"
+name = "car_in_main_window"
+requirements = [ "generate car in main window and pass it to game view",]
+context_files = [ 5, 10, 11,]
+save_file = 5
+assigned_to = "implementer"
+status = "implementing"
+
+[[task]]
+feature = "window"
+name = "car_in_game_view"
+requirements = [ "show car in game view", "get instance passed from main window",]
+context_files = [ 5, 10, 11,]
+save_file = 10
+assigned_to = "implementer"
+status = "implementing"
+

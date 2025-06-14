@@ -6,6 +6,7 @@ from src.settings.settings_crud import SettingsCRUD
 from src.main_menu.main_menu_view import MainMenu
 from src.main_menu.settings_menu_view import SettingsMenu
 from src.game_window.game_view import GameView
+from src.car.car import Car
 
 class GameWindow(Window):
     WIDTH: Final[int] = 1024
@@ -17,6 +18,7 @@ class GameWindow(Window):
         super().__init__(self.WIDTH, self.HEIGHT, self.TITLE, resizable=True, fullscreen=settings.fullscreen)
         set_background_color(color.BLACK)
         self._crud = crud
+        self._car = Car()
         factories: dict[str, Callable[[MenuNavigation], View]] = {
             "main_menu": self._main_menu_factory,
             "settings_menu": self._settings_menu_factory,
@@ -32,10 +34,9 @@ class GameWindow(Window):
         return SettingsMenu(controller, self._crud)
 
     def _game_view_factory(self, controller: MenuNavigation) -> GameView:
-        return GameView()
+        return GameView(self._car)
 
 if __name__ == "__main__":
     crud = SettingsCRUD(Path('settings.toml'))
     window = GameWindow(crud)
     run()
-
