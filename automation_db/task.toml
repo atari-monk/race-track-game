@@ -259,3 +259,12 @@ save_file = 11
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "car"
+name = "refactor_car"
+requirements = [ "generate a dataclass model with state of car", "move all constants to data model", "generate drive model class defining behaviors of driving a car", "build it from class components like a machine would be",]
+context_files = [ 11,]
+save_file = 11
+assigned_to = "implementer"
+status = "tested"
+

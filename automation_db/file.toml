@@ -53,6 +53,46 @@ file_name = "car.py"
 path = "src/car"
 
 [[file]]
+id = 13
+feature = "car"
+task = "refactor_car"
+file_name = "car_specs.py"
+class_name = "CarSpecs"
+path = "src/car"
+
+[[file]]
+id = 14
+feature = "car"
+task = "refactor_car"
+file_name = "car_state.py"
+class_name = "CarState"
+path = "src/car"
+
+[[file]]
+id = 15
+feature = "car"
+task = "refactor_car"
+file_name = "car_physics.py"
+class_name = "CarPhysics"
+path = "src/car"
+
+[[file]]
+id = 16
+feature = "car"
+task = "refactor_car"
+file_name = "car_renderer.py"
+class_name = "CarRenderer"
+path = "src/car"
+
+[[file]]
+id = 17
+feature = "car"
+task = "refactor_car"
+file_name = "car_input.py"
+class_name = "CarInput"
+path = "src/car"
+
+[[file]]
 id = 12
 feature = "track"
 task = "track_object"
