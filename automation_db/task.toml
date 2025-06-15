@@ -268,3 +268,30 @@ save_file = 11
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "car"
+name = "refactor_car_physics"
+requirements = [ "refacor it to smaller methods", "make it much more understandable",]
+context_files = [ 15,]
+save_file = 15
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "car"
+name = "document_car"
+requirements = [ "generate md documentation explaining in detail how car works",]
+context_files = [ 11, 13, 14, 15, 16, 17,]
+save_file = 18
+assigned_to = "implementer"
+status = "tested"
+
+[[task]]
+feature = "car"
+name = "document_car_physics"
+requirements = [ "generate md documentation explaining class in details",]
+context_files = [ 15,]
+save_file = 19
+assigned_to = "implementer"
+status = "tested"
+

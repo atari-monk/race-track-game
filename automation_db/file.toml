@@ -93,6 +93,20 @@ class_name = "CarInput"
 path = "src/car"
 
 [[file]]
+id = 18
+feature = "car"
+task = "document_car"
+file_name = "car_doc.md"
+path = "docs/car"
+
+[[file]]
+id = 19
+feature = "car"
+task = "document_car_physics"
+file_name = "car_physics_doc.md"
+path = "docs/car"
+
+[[file]]
 id = 12
 feature = "track"
 task = "track_object"
