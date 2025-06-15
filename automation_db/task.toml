@@ -250,3 +250,12 @@ save_file = 12
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "car"
+name = "drive_model"
+requirements = [ "make car length/width proportional", "use kinematic bicycle model for motion", "implement acceleration with F=ma and max speed limit", "constrain steering angle and rate", "add tire friction limits (simplified circle constraint)", "bounding box collision checks (width/length proportional)", "optional: add simple drag force (F_drag = -k * v²)",]
+context_files = [ 11,]
+save_file = 11
+assigned_to = "implementer"
+status = "tested"
+
