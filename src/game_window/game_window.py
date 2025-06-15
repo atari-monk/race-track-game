@@ -19,9 +19,15 @@ class GameWindow(Window):
         super().__init__(self.WIDTH, self.HEIGHT, self.TITLE, resizable=True, fullscreen=settings.fullscreen)
         set_background_color(color.BLACK)
         self._crud = crud
-        self._car = Car()
+
         self._track = Track()
         self._track.resize(self.width, self.height)
+
+        self._car = Car()
+        #self._car.state.center_x = self._track._center_x + (track._inner_radius_x + track._outer_radius_x) / 2
+        #self._car.state.center_y = self._track._center_y
+        self._car.state.heading = self._track.compute_heading_clockwise(self._car.state.center_x, self._car.state.center_y)
+        
         factories: dict[str, Callable[[MenuNavigation], View]] = {
             "main_menu": self._main_menu_factory,
             "settings_menu": self._settings_menu_factory,

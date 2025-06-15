@@ -7,10 +7,12 @@ from src.car.car_specs import CarSpecs
 from src.car.car_state import CarState
 
 class Car(arcade.Sprite):
-    def __init__(self) -> None:
+    def __init__(self, start_x: float = 400.0, start_y: float = 200.0) -> None:
         super().__init__()
         self.specs = CarSpecs()
         self.state = CarState()
+        self.state.center_x = start_x
+        self.state.center_y = start_y
         self.physics = CarPhysics(self.specs, self.state)
         self.renderer = CarRenderer(self.specs, self.state)
         self.input = CarInput(self.state)

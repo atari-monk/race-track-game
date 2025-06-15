@@ -295,3 +295,12 @@ save_file = 19
 assigned_to = "implementer"
 status = "tested"
 
+[[task]]
+feature = "track"
+name = "track_car_collision"
+requirements = [ "how to set up collision beetween car and track", "car should stop if it is out of track", "car should start on track", "car should restet clockwise after collision with track"]
+context_files = [ 11, 13, 14, 15, 16, 17, 12,]
+save_file = 12
+assigned_to = "implementer"
+status = "tested"
+

@@ -20,6 +20,7 @@ class GameView(View):
         self._car.draw()
 
     def on_update(self, delta_time: float) -> None:
+        self._track.apply_penalty(self._car, delta_time)
         self._car.update()
 
     def on_key_press(self, symbol: int, modifiers: int) -> None:
