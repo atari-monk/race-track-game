@@ -239,5 +239,14 @@ requirements = [ "make track center on screen and refresh it on resize, fullscre
 context_files = [ 5, 12,]
 save_file = 12
 assigned_to = "implementer"
-status = "implementing"
+status = "tested"
+
+[[task]]
+feature = "track"
+name = "shape_track_object"
+requirements = [ "make ellipses produce road of same width",]
+context_files = [ 12,]
+save_file = 12
+assigned_to = "implementer"
+status = "tested"
 

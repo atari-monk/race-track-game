@@ -4,6 +4,7 @@ import arcade
 
 class Track:
     SLOW_FACTOR: Final[float] = 0.2
+    ROAD_WIDTH: Final[float] = 150.0  # Choose your desired road width
 
     def __init__(self) -> None:
         self._center_x: float = 0.0
@@ -20,10 +21,14 @@ class Track:
         self._height = height
         self._center_x = width / 2
         self._center_y = height / 2
-        self._outer_radius_x = width * 0.45
-        self._outer_radius_y = height * 0.35
-        self._inner_radius_x = width * 0.25
-        self._inner_radius_y = height * 0.15
+        
+        # Set outer radii based on window dimensions
+        self._outer_radius_x = width * 0.5
+        self._outer_radius_y = height * 0.5
+        
+        # Calculate inner radii to maintain constant road width
+        self._inner_radius_x = self._outer_radius_x - self.ROAD_WIDTH
+        self._inner_radius_y = self._outer_radius_y - self.ROAD_WIDTH
 
     def draw(self) -> None:
         arcade.draw_ellipse_filled(
@@ -52,4 +57,3 @@ class Track:
         if self.is_outside_track(car.center_x, car.center_y):
             car.change_x *= self.SLOW_FACTOR
             car.change_y *= self.SLOW_FACTOR
-
